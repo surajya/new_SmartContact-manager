@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<section>
+		<div>
+			<div class="card ml-5 mr-3">
+				<div class="card-body">
+					<div class="container text-center">
+						<h1>Contact Details</h1>
+						<td class="text-center"> <img style="height: 200px; width: 200px;" class="Profile_pic" src=""
+								th:src="@{'/img/'+${contact.cImageUrl}}" alt="Profile_Pic"></img> <br> <span
+								th:text="${contact.cName}"></span></td>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col"><span th:text="${contact.cId}"></span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">NickName</th>
+									<td><span th:text="${contact.cNickName}"></td>
+
+								</tr>
+								<tr>
+									<th scope="row">Email</th>
+									<td><span th:text="${contact.cEmail}"></td>
+
+								</tr>
+								<tr>
+									<th scope="row">Phone Number</th>
+									<td><span th:text="${contact.cPhone}"></td>
+
+								</tr>
+								<tr>
+									<th scope="row">Work</th>
+									<td><span th:text="${contact.cWork}"></td>
+
+								</tr>
+								<tr>
+									<th scope="row">Discription</th>
+									<td><span th:text="${contact.cDiscription}"></td>
+
+								</tr>
+							</tbody>
+						</table>
+						<button class="btn btn-danger btn-small">Remove</button>
+						<button class="btn btn-primary btn-small">update</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
