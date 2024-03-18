@@ -51,16 +51,19 @@
 								</tr>
 							</tbody>
 						</table>
-						<button class="btn btn-danger btn-small">Remove</button>
-						<button class="btn btn-primary btn-small">update</button>
+						<a href="#" th:onclick="|deleteContact(${contact.cId})|"
+							class="btn btn-danger btn-small">Remove</a>
+						<form th:action="@{'/user/update-contact/'+${contact.cId}}" method="post" class="mt-2">
+							<button type="submit" class="btn btn-primary btn-small">update</button>
+						</form>
 					</div>
 				</div>
 			</div>
 			<div class="text-center p-3 bg-danger text-white">
-				<h1  th:unless="${contact}">You have not authorization to view this contact</h1>
-				
+				<h1 th:unless="${contact}">You have not authorization to view this contact</h1>
+
 			</div>
-			
+
 		</div>
 	</section>
 </body>

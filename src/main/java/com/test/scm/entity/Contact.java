@@ -120,6 +120,10 @@ public class Contact {
 				+ ", cImageUrl=" + cImageUrl + ", user=" + user + "]";
 	}
 	
+	@Override
+	public boolean equals(Object object) {
+		return this.cId ==((Contact)object).getcId();
+	}
 	
 	
 }
