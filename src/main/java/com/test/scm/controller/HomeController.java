@@ -60,7 +60,7 @@ public class HomeController {
 			
 			user.setuEnable(true);
 			user.setuRole("ROLE_USER");
-			user.setuImageUrl("/image/difdj.png");
+			user.setuImageUrl("/img/default.png");
 			user.setuPassword(passwordEncoder.encode(user.getuPassword()));
 			
 			model.addAttribute("user", new User());
